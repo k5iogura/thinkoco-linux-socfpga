@@ -1,20 +1,25 @@
 # thinkoko-linux-socfpga
 
-1. Backup for Linux source code using in DE10Nano OpenCL-BSP [original here](https://github.com/thinkoco/linux-socfpga).
-2. Linux Version is socfpga 3.18.0-00266-g9a879ba.
-3. supporting UVC Camera, OpenCL kernel.
-4. not supporting HDMI-IP.
+### Why backup?  
+[[original git is here]](https://github.com/thinkoco/linux-socfpga)  
+I cannot found linux-socfpga 3.10.x tag anywhere. Linux-ltsi release was expired and erased.  
+But I need 3.10.x version for of linux source code to rebuild linux kernel for DE10Nano(Cortex-A9) to support UVC Camera with OpenCL feature.
 
-## testing
+features bellow,
+1. Backup for Linux source code using in DE10Nano OpenCL-BSP .
+2. Linux Version is socfpga 3.18.0-00266-g9a879ba.
+3. Supporting UVC Camera and execution of OpenCL kernel without installing HDMI-Hardware IP on FPGA Fabric.
+
+## Testing
 
 0. opkg ready.
-1. darknet_ttt for TTT5_224_160.cfg OK!.
-2. UVC Camera by cheese by opkg OK!.
-3. Internet access through HostPC(Windows7/CentOS7) OK!
+1. About darknet framework, darknet_ttt for TTT5_224_160.cfg.
+2. About UVC Camera by cheese.
+3. About Internet access through HostPC(Windows7/CentOS7).
 
 ![](https://raw.githubusercontent.com/thinkoco/c5soc_opencl/master/picture/arch.png)
 
-## Build zImage and socfpga.dtb on HostPC(Linux)
+## How to build zImage and socfpga.dtb on HostPC(Linux)
   
 $ git clone https://github.com/k5iogura/thinkoco-linux-socfpga.git  
 $ cd linux-socfpga  
