@@ -16,7 +16,7 @@
 
 ## Build zImage and socfpga.dtb on HostPC(Linux)
   
-$ git clone https://github.com/thinkoco/linux-socfpga.git  
+$ git clone https://github.com/k5iogura/thinkoco-linux-socfpga.git  
 $ cd linux-socfpga  
 $ git checkout -b socfpga-opencl_3.18 origin/socfpga-3.18  
 $ cp config_opencl .config  
