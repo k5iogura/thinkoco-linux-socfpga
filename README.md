@@ -2,12 +2,14 @@
 
 ### Why backup?  
 [[original git is here]](https://github.com/thinkoco/linux-socfpga)  
-I cannot found linux-socfpga 3.10.x tag anywhere. Linux-ltsi release was expired and erased.  
-But I need 3.10.x version for of linux source code to rebuild linux kernel for DE10Nano(Cortex-A9) to support UVC Camera with OpenCL feature.
+I cannot found linux-socfpga 3.1x.x git-branch anywhere. Linux-3.1x.x-ltsi(Long Term Support) release may was expired and erased.  
+But, I need 3.1x.x version for of linux source code to rebuild linux kernel for DE10Nano(Cortex-A9) to support UVC Camera with OpenCL feature.
+Use branch "socfpga-opencl_3.18".  
+If you need socfpga-opencl_3.10-ltsi, git clone [here](https://github.com/k5iogura/sgstream-linux-socfpga_310).
 
 features bellow,
 1. Backup for Linux source code using in DE10Nano OpenCL-BSP .
-2. Linux Version is socfpga 3.18.0-00266-g9a879ba.
+2. Linux Kernel Version is socfpga 3.18.0-00266-g9a879ba.
 3. Supporting UVC Camera and execution of OpenCL kernel without installing HDMI-Hardware IP on FPGA Fabric.
 
 ## Testing
@@ -32,6 +34,9 @@ $ export LOADADDR=0x8000
 $ make zImage  
 $ make socfpga_cyclone5_de10_nano.dtb  
 $ make modules_install INSTALL_MOD_PATH=~/sdcard/  
-  
-$ cp ~/sdcard/linux-socfpga/arch/arm/boot/zImage ./  
-$ cp ~/sdcard/linux-socfpga/arch/arm/boot/dts/socfpga_cyclone5_de10_nano.dtb  ./socfpga.dtb  
+
+### results zImage and dtb are:  
+ (a) ./arch/arm/boot/zImage  
+ (b) ./arch/arm/boot/dts/socfpga_cyclone5_de10_nano.dtb  
+ next is that copy (a)(b) on SDCard for DE10Nano through device file /dev/mmcblk0p1.  
+ (You can make visible SDCard partition by issue linux mount command "mount /dev/mmcblk0p1 /mnt")
