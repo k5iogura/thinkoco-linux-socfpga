@@ -4,7 +4,7 @@
 [[original git is here]](https://github.com/thinkoco/linux-socfpga)  
 I could not find linux-socfpga 3.1x.x git-branch anywhere. Linux-3.1x.x-ltsi(Long Term Support) release may be expired and erased.  
 But, I need 3.1x.x version for of linux source code to rebuild linux kernel for DE10Nano(Cortex-A9) to support UVC Camera with OpenCL feature.
-- [x] Use branch "socfpga-opencl_3.18".  
+- [x] Use branch "socfpga-3.18".  
 - [x] If you need socfpga-opencl_3.10-ltsi, git clone [here](https://github.com/k5iogura/sgstream-linux-socfpga_310).
 
 features bellow,
