@@ -1,4 +1,4 @@
-# thinkoko-linux-socfpga
+# thinkoco-linux-socfpga
 
 ### Why backup?  
 [[original git is here]](https://github.com/thinkoco/linux-socfpga)  
